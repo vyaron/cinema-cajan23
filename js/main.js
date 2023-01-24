@@ -8,7 +8,7 @@
 // TODO: Uplift your model - each seat should have its own price... 
 // TODO: in seat details, show available seats around 
 // TODO: Upload to GitHub Pages
-// ITP: Auto close the modal after 3s
+// TODO: Auto close the modal after 3s
 
 var gElSelectedSeat = null
 const gCinema = createCinema()
@@ -96,6 +96,10 @@ function onShowSeatDetails(pos) {
     elBtnBook.dataset.j = pos.j
 
     elPopup.hidden = false
+    setTimeout(()=>{
+        unSelectSeat()
+        
+    }, 3000)
 }
 
 function onHideSeatDetails() {
